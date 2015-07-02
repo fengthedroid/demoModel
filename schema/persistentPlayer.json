@@ -4,6 +4,9 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "_id": {
+      "type": "object"
+    },
     "inGameName": {
       "type": "string"
     },
@@ -20,8 +23,17 @@
       "type": "string"
     }
   },
-  "required": [
-    "inGameName",
-    "gameID"
+  "oneOf": [
+    {
+      "required": [
+        "inGameName",
+        "gameID"
+      ]
+    },
+    {
+      "required": [
+        "_id"
+      ]
+    }
   ]
 }
