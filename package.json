@@ -1,0 +1,22 @@
+{
+  "name": "model-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fengthedroid/demoModel.git"
+  },
+  "author": "Feng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengthedroid/demoModel/issues"
+  },
+  "homepage": "https://github.com/fengthedroid/demoModel#readme",
+  "dependencies": {
+    "z-schema": "^3.12.0"
+  }
+}
