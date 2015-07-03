@@ -61,7 +61,14 @@ describe('Game model', function() {
   });
 
   it('should not update again', function() {
-    PersistentPlayer.update({ _id: 'lollololo', inGameName: 'new name' }, function(err, data) {
+    PersistentPlayer.update({ _id: 'lollololo', inGameName: 'new name', extra: 'extra stuff' }, function(err, data) {
+      should.exist(err);
+      should.not.exist(data);
+    });
+  });
+
+  it('should not update again again', function() {
+    PersistentPlayer.update({ inGameName: 456, extra: 'extra stuff' }, function(err, data) {
       should.exist(err);
       should.not.exist(data);
     });
